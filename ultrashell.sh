@@ -1,5 +1,5 @@
 #!/bin/bash
-EXE_FILE=../minishell
+EXE_FILE=minishell
 
 #LOGO PRINT
 printf '\n'
@@ -22,4 +22,4 @@ rm -rf results
 mkdir results
 mkdir results/YOUR_RESULTS
 mkdir results/BASH_RESULTS
-bash minishell
+./scripts/execute_tester.sh
