@@ -1,7 +1,5 @@
-DIR=minishell
 RUN=./minishell
-OUT=output/
-TEST=susu.c
+TESTER_HOME=$HOME
 
 # COLORS
 D=\\x1b[31m
