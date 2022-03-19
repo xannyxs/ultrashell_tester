@@ -83,9 +83,53 @@ function minishell_test_16(){
 function minishell_test_17(){
 	echo "env"
 }
+
 function minishell_test_18(){
 	echo "env Weeiirrddd"
 }
+
 function minishell_test_19(){
 	echo "cd Weyooo"
+}
+
+function minishell_test_20(){
+	echo "random_cmd"
+}
+
+function minishell_test_21(){
+	echo "cat bla"
+}
+
+function minishell_test_22(){
+	echo "export ls=\"ls -l\""
+	echo "$ls"
+}
+
+function minishell_test_23(){
+	echo "echo \$ls"
+}
+
+function minishell_test_24(){
+	echo "export var=a"
+	echo "export \$var=test"
+	echo "echo \$var \$a"
+}
+
+function minishell_test_25(){
+	echo "./utils/non_exe_file.sh"
+}
+
+function minishell_test_26(){
+	echo "export test1"
+	echo "env | grep test1"
+}
+
+function minishell_test_27(){
+	echo "export test2=test"
+	echo "env | grep test2"
+}
+
+function minishell_test_28(){
+	echo "export test3=\$HOME"
+	echo "env | grep test3"
 }

@@ -95,3 +95,48 @@ function bash_test_18(){
 function bash_test_19(){
 	cd Weyooo
 }
+
+function bash_test_20(){
+	random_cmd
+}
+
+function bash_test_21(){
+	cat bla
+}
+
+function bash_test_22(){
+	export ls="ls -l"
+	$ls
+}
+
+function bash_test_23(){
+	echo $ls
+}
+
+function bash_test_24(){
+	export var=a
+	export $var=test
+	echo $var $a
+}
+
+function bash_test_25(){
+	./utils/non_exe_file.sh
+}
+
+function bash_test_26(){
+	export test1
+	env | grep test1
+	unset test1
+}
+
+function bash_test_27(){
+	export test2=test
+	env | grep test2
+	unset test2
+}
+
+function bash_test_28(){
+	export test3=\$HOME
+	env | grep test3
+	unset test3
+}

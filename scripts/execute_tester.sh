@@ -32,6 +32,22 @@ minishell_test_17 | $RUN > $YOUR_RESULTS/test_17.out
 minishell_test_18 | $RUN 2> $YOUR_RESULTS/test_18.out
 minishell_test_19 | $RUN 2> $YOUR_RESULTS/test_19.out
 echo $? >> $YOUR_RESULTS/test_19.out
+minishell_test_20 | $RUN 2> $YOUR_RESULTS/test_20.out
+echo $? >> $YOUR_RESULTS/test_20.out
+minishell_test_21 | $RUN 2> $YOUR_RESULTS/test_21.out
+echo $? >> $YOUR_RESULTS/test_21.out
+minishell_test_22 | $RUN > $YOUR_RESULTS/test_22.out
+echo $? >> $YOUR_RESULTS/test_22.out
+export ls="ls -l"
+minishell_test_23 | $RUN > $YOUR_RESULTS/test_23.out
+echo $? >> $YOUR_RESULTS/test_23.out
+unset ls
+minishell_test_24 | $RUN > $YOUR_RESULTS/test_24.out
+minishell_test_25 | $RUN 2> $YOUR_RESULTS/test_25.out
+echo $? >> $BASH_RESULTS/test_25.out
+minishell_test_26 | $RUN 2> $YOUR_RESULTS/test_26.out
+minishell_test_27 | $RUN 2> $YOUR_RESULTS/test_27.out
+minishell_test_28 | $RUN 2> $YOUR_RESULTS/test_28.out
 
 # Bash
 bash_test_00 > $BASH_RESULTS/test_00.out
@@ -55,6 +71,20 @@ bash_test_17 > $BASH_RESULTS/test_17.out
 bash_test_18 2> $BASH_RESULTS/test_18.out
 bash_test_19 2> $BASH_RESULTS/test_19.out
 echo $? >> $BASH_RESULTS/test_19.out
+bash_test_20 2> $BASH_RESULTS/test_20.out
+echo $? >> $BASH_RESULTS/test_20.out
+bash_test_21 2> $BASH_RESULTS/test_21.out
+echo $? >> $BASH_RESULTS/test_21.out
+bash_test_22 > $BASH_RESULTS/test_22.out
+echo $? >> $BASH_RESULTS/test_22.out
+bash_test_23 > $BASH_RESULTS/test_23.out
+echo $? >> $BASH_RESULTS/test_23.out
+bash_test_24 > $BASH_RESULTS/test_24.out
+bash_test_25 2> $BASH_RESULTS/test_25.out
+echo $? >> $BASH_RESULTS/test_25.out
+bash_test_26 2> $BASH_RESULTS/test_26.out
+bash_test_27 2> $BASH_RESULTS/test_27.out
+bash_test_28 2> $BASH_RESULTS/test_28.out
 
 clear
 
