@@ -161,3 +161,24 @@ function minishell_test_34(){
 function minishell_test_35(){
 	echo "echo \"\"abc\"\""
 }
+
+function minishell_test_36(){
+	echo "export ls=\"ls -l\""
+	echo "echo \"\$ls\""
+}
+
+function minishell_test_37(){
+	echo "cat ultrashell.sh | grep pr | head -n 5 | cd hoi"
+}
+
+function minishell_test_38(){
+	echo "cat ultrashell.sh | grep pr | head -n 5 | hoi"
+}
+
+function minishell_test_39(){
+	echo "ls | exit"
+}
+
+function minishell_test_40(){
+	echo "> test | echo hoi"
+}

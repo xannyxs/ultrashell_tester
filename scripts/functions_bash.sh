@@ -168,3 +168,25 @@ function bash_test_34(){
 function bash_test_35(){
 	echo ""abc""
 }
+
+function bash_test_36(){
+	export ls="ls -l"
+	echo "$ls"
+	unset ls
+}
+
+function bash_test_37(){
+	cat ultrashell.sh | grep pr | head -n 5 | cd hoi
+}
+
+function bash_test_38(){
+	cat ultrashell.sh | grep pr | head -n 5 | hoi
+}
+
+function bash_test_39(){
+	ls | exit
+}
+
+function bash_test_40(){
+	> test | echo hoi
+}

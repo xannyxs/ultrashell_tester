@@ -58,6 +58,13 @@ echo $? >> $YOUR_RESULTS/test_33.out
 minishell_test_34 | $RUN 2> $YOUR_RESULTS/test_34.out
 echo $? >> $YOUR_RESULTS/test_34.out
 minishell_test_35 | $RUN > $YOUR_RESULTS/test_35.out
+minishell_test_36 | $RUN > $YOUR_RESULTS/test_36.out
+minishell_test_37 | $RUN 2> $YOUR_RESULTS/test_37.out
+echo $? >> $YOUR_RESULTS/test_37.out
+minishell_test_38 | $RUN 2> $YOUR_RESULTS/test_38.out
+echo $? >> $YOUR_RESULTS/test_38.out
+minishell_test_39 | $RUN 2> $YOUR_RESULTS/test_39.out
+minishell_test_40 | $RUN > $YOUR_RESULTS/test_40.out
 
 # Bash
 bash_test_00 > $BASH_RESULTS/test_00.out
@@ -105,12 +112,20 @@ echo $? >> $BASH_RESULTS/test_33.out
 bash_test_34 2> $BASH_RESULTS/test_34.out
 echo $? >> $BASH_RESULTS/test_34.out
 bash_test_35 > $BASH_RESULTS/test_35.out
+bash_test_36 > $BASH_RESULTS/test_36.out
+bash_test_37 2> $BASH_RESULTS/test_37.out
+echo $? >> $BASH_RESULTS/test_37.out
+bash_test_38 2> $BASH_RESULTS/test_38.out
+echo $? >> $BASH_RESULTS/test_38.out
+bash_test_39 2> $BASH_RESULTS/test_39.out
+bash_test_40 > $BASH_RESULTS/test_40.out
 
 clear
 
 printf "NOTE: Test_19 can have a different exit code!\n"
 printf "NOTE: Test_33 has a different outcome when the user
 		does it him/herself\n"
+printf "NOTE: Test_37 can have a different exit code!\n"
 
 printf $P
 printf "\n***\n"
