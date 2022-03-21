@@ -133,3 +133,31 @@ function minishell_test_28(){
 	echo "export test3=\$HOME"
 	echo "env | grep test3"
 }
+
+function minishell_test_29(){
+	echo "echo ~"
+}
+
+function minishell_test_30(){
+	echo "echo \"bip | bip ; coyotte > <\""
+}
+
+function minishell_test_31(){
+	echo "echo $USER$wouw$USER$USERtest$USER"
+}
+
+function minishell_test_32(){
+	echo "$"
+}
+
+function minishell_test_33(){
+	echo "$LESS$VAR"
+}
+
+function minishell_test_34(){
+	echo ".."
+}
+
+function minishell_test_35(){
+	echo "echo \"\"abc\"\""
+}

@@ -44,10 +44,20 @@ echo $? >> $YOUR_RESULTS/test_23.out
 unset ls
 minishell_test_24 | $RUN > $YOUR_RESULTS/test_24.out
 minishell_test_25 | $RUN 2> $YOUR_RESULTS/test_25.out
-echo $? >> $BASH_RESULTS/test_25.out
-minishell_test_26 | $RUN 2> $YOUR_RESULTS/test_26.out
-minishell_test_27 | $RUN 2> $YOUR_RESULTS/test_27.out
-minishell_test_28 | $RUN 2> $YOUR_RESULTS/test_28.out
+echo $? >> $YOUR_RESULTS/test_25.out
+minishell_test_26 | $RUN > $YOUR_RESULTS/test_26.out
+minishell_test_27 | $RUN > $YOUR_RESULTS/test_27.out
+minishell_test_28 | $RUN > $YOUR_RESULTS/test_28.out
+minishell_test_29 | $RUN > $YOUR_RESULTS/test_29.out
+minishell_test_30 | $RUN > $YOUR_RESULTS/test_30.out
+minishell_test_31 | $RUN > $YOUR_RESULTS/test_31.out
+minishell_test_32 | $RUN 2> $YOUR_RESULTS/test_32.out
+echo $? >> $YOUR_RESULTS/test_32.out
+minishell_test_33 | $RUN 2> $YOUR_RESULTS/test_33.out
+echo $? >> $YOUR_RESULTS/test_33.out
+minishell_test_34 | $RUN 2> $YOUR_RESULTS/test_34.out
+echo $? >> $YOUR_RESULTS/test_34.out
+minishell_test_35 | $RUN > $YOUR_RESULTS/test_35.out
 
 # Bash
 bash_test_00 > $BASH_RESULTS/test_00.out
@@ -82,13 +92,25 @@ echo $? >> $BASH_RESULTS/test_23.out
 bash_test_24 > $BASH_RESULTS/test_24.out
 bash_test_25 2> $BASH_RESULTS/test_25.out
 echo $? >> $BASH_RESULTS/test_25.out
-bash_test_26 2> $BASH_RESULTS/test_26.out
-bash_test_27 2> $BASH_RESULTS/test_27.out
-bash_test_28 2> $BASH_RESULTS/test_28.out
+bash_test_26 > $BASH_RESULTS/test_26.out
+bash_test_27 > $BASH_RESULTS/test_27.out
+bash_test_28 > $BASH_RESULTS/test_28.out
+bash_test_29 > $BASH_RESULTS/test_29.out
+bash_test_30 > $BASH_RESULTS/test_30.out
+bash_test_31 > $BASH_RESULTS/test_31.out
+bash_test_32 2> $BASH_RESULTS/test_32.out
+echo $? >> $BASH_RESULTS/test_32.out
+bash_test_33 2> $BASH_RESULTS/test_33.out
+echo $? >> $BASH_RESULTS/test_33.out
+bash_test_34 2> $BASH_RESULTS/test_34.out
+echo $? >> $BASH_RESULTS/test_34.out
+bash_test_35 > $BASH_RESULTS/test_35.out
 
 clear
 
 printf "NOTE: Test_19 can have a different exit code!\n"
+printf "NOTE: Test_33 has a different outcome when the user
+		does it him/herself\n"
 
 printf $P
 printf "\n***\n"

@@ -136,7 +136,35 @@ function bash_test_27(){
 }
 
 function bash_test_28(){
-	export test3=\$HOME
+	export test3=$HOME
 	env | grep test3
 	unset test3
+}
+
+function bash_test_29(){
+	echo ~
+}
+
+function bash_test_30(){
+	echo "bip | bip ; coyotte > <"
+}
+
+function bash_test_31(){
+	echo "$USER$wouw$USER$USERtest$USER"
+}
+
+function bash_test_32(){
+	$
+}
+
+function bash_test_33(){
+	$LESS$VAR
+}
+
+function bash_test_34(){
+	..
+}
+
+function bash_test_35(){
+	echo ""abc""
 }
