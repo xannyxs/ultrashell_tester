@@ -37,7 +37,9 @@ minishell_test_21 | $RUN 2> $YOUR_RESULTS/test_21.out
 minishell_test_22 | $RUN
 minishell_test_23 | $RUN
 minishell_test_24 | $RUN
-# minishell_test_25 | $RUN Need to push this file but without any perms
+chmod 000 utils/non_exe_file.sh
+minishell_test_25 | $RUN 2>  $YOUR_RESULTS/test_25.out Need to push this file but without any perms
+chmod 555 utils/non_exe_file.sh
 minishell_test_26 | $RUN
 minishell_test_27 | $RUN
 minishell_test_28 | $RUN
