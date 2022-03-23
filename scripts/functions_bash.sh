@@ -1,235 +1,161 @@
 source scripts/defines.sh
 
-function bash_test_00(){
+function bash_test_0(){
 	pwd
 	echo $?
 }
 
-function bash_test_01(){
+function bash_test_1(){
 	cd ../../../../../..
 	echo $?
 	pwd
 }
 
-function bash_test_02(){
+function bash_test_2(){
 	cd ~
 	echo $?
 	pwd
 }
 
-function bash_test_03(){
+function bash_test_3(){
 	cd ~/Desktop
 	echo $?
 	pwd
 }
 
-function bash_test_04(){
+function bash_test_4(){
 	cd
 	echo $?
 	pwd
 }
 
-function bash_test_05(){
-	unset HOME
-	cd
-	echo $?
-}
-
-function bash_test_06(){
+function bash_test_5(){
 	export HOME=$TESTER_HOME
 	cd
 	echo $?
 	pwd
 }
 
-function bash_test_07(){
+function bash_test_6(){
 	cd
 	cd .. cool swag
 	echo $?
 	pwd
 }
 
-function bash_test_08(){
-	cd Eyooooo
-	echo $?
-}
-
-function bash_test_09(){
+function bash_test_7(){
 	cd -
 	echo $?
 }
 
-function bash_test_10(){
-	cd –
-	echo $?
-}
-
-function bash_test_11(){
-	mkdir a
-	mkdir a/b
-	cd a/b
-	rm -r ../../a
-	cd ..
-	echo $?
-}
-
-function bash_test_12(){
+function bash_test_8(){
 	echo
 	echo $?
 }
 
-function bash_test_12(){
-	echo $NonExistingVar
-	echo $?
-}
-
-function bash_test_13(){
+function bash_test_9(){
 	echo $PATH
 	echo $?
 }
 
-function bash_test_14(){
+function bash_test_10(){
 	echo ~
 	echo $?
 }
 
-function bash_test_15(){
+function bash_test_11(){
 	echo -n -n -nnnn -nnnnm
 	echo $?
 }
 
-function bash_test_16(){
+function bash_test_12(){
 	echo -n -nnn hello -n
 	echo $?
 }
 
-function bash_test_17(){
+function bash_test_13(){
 	env
 	echo $?
 }
 
-function bash_test_18(){
-	env Weeiirrddd
-	echo $?
-}
-
-function bash_test_19(){
-	cd Weyooo
-	echo $?
-}
-
-function bash_test_20(){
-	random_cmd
-	echo $?
-}
-
-function bash_test_21(){
-	cat bla
-	echo $?
-}
-
-function bash_test_22(){
+function bash_test_14(){
 	export ls="ls -l"
 	$ls
 	echo $?
 }
 
-function bash_test_23(){
+function bash_test_15(){
 	echo $ls
 	echo $?
 }
 
-function bash_test_24(){
+function bash_test_16(){
 	export var=a
 	export $var=test
 	echo $var $a
 	echo $?
 }
 
-function bash_test_25(){
-	./utils/non_exe_file.sh
-	echo $?
-}
-
-function bash_test_26(){
+function bash_test_17(){
 	export test1
 	env | grep test1
 	echo $?
 	unset test1
 }
 
-function bash_test_27(){
+function bash_test_18(){
 	export test2=test
 	env | grep test2
 	echo $?
 	unset test2
 }
 
-function bash_test_28(){
+function bash_test_19(){
 	export test3=$HOME
 	env | grep test3
 	echo $?
 	unset test3
 }
 
-function bash_test_29(){
+function bash_test_20(){
 	echo ~
 	echo $?
 }
 
-function bash_test_30(){
+function bash_test_21(){
 	echo "bip | bip ; coyotte > <"
 	echo $?
 }
 
-function bash_test_31(){
+function bash_test_22(){
 	echo "$USER$wouw$USER$USERtest$USER"
 	echo $?
 }
 
-function bash_test_32(){
-	$
-	echo $?
-}
-
-function bash_test_33(){
-	$LESS$VAR
-	echo $?
-}
-
-function bash_test_34(){
-	..
-	echo $?
-}
-
-function bash_test_35(){
+function bash_test_23(){
 	echo ""abc""
 	echo $?
 }
 
-function bash_test_36(){
+function bash_test_24(){
 	export ls="ls -l"
 	echo "$ls"
 	echo $?
 	unset ls
 }
 
-function bash_test_37(){
-	cat ultrashell.sh | grep pr | head -n 5 | cd hoi
-	echo $?
-}
-
-function bash_test_38(){
-	cat ultrashell.sh | grep pr | head -n 5 | hoi
-	echo $?
-}
-
-function bash_test_39(){
+function bash_test_25(){
 	ls | exit
 	echo $?
 }
 
-function bash_test_40(){
+function bash_test_26(){
 	> test | echo hoi
+	echo $?
+}
+
+function bash_test_27(){
+	export var="     truc  "
+	echo $var | cat -e
 	echo $?
 }

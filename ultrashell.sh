@@ -23,6 +23,7 @@ fi
 
 rm -rf results
 mkdir results
+mkdir results/DIFF
 mkdir results/YOUR_RESULTS
 mkdir results/BASH_RESULTS
 ./scripts/execute_tester.sh
