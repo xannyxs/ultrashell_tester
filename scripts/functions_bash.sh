@@ -159,3 +159,23 @@ function bash_test_27(){
 	echo $var | cat -e
 	echo $?
 }
+
+function bash_test_28(){
+	echo "$test""Makefile"
+	echo $?
+}
+
+function bash_test_29(){
+	echo "$test"Makefile
+	echo $?
+}
+
+function bash_test_30(){
+	echo "$test" Makefile
+	echo $?
+}
+
+function bash_test_31(){
+	export $random
+	echo $?
+}

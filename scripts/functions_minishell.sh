@@ -160,3 +160,41 @@ function minishell_test_27(){
 	echo "echo \$var | cat -e > $SHELL_DIR/test_27.out"
 	echo "echo $? >> $SHELL_DIR/test_27.out"
 }
+
+function minishell_test_28(){
+	echo "echo \"$test""Makefile\" > $SHELL_DIR/test_28.out"
+	echo "echo \$? >> $SHELL_DIR/test_28.out"
+}
+
+function minishell_test_29(){
+	echo "echo \"$test\"Makefile > $SHELL_DIR/test_29.out"
+	echo "echo \$? >> $SHELL_DIR/test_29.out"
+}
+
+function minishell_test_30(){
+	echo "echo \"$test\" Makefile > $SHELL_DIR/test_30.out"
+	echo "echo \$? >> $SHELL_DIR/test_30.out"
+}
+
+function minishell_test_31(){
+	echo "export \$random > $SHELL_DIR/test_31.out"
+	echo "echo \$? >> $SHELL_DIR/test_31.out"
+}
+
+function minishell_test_32(){
+	echo "export test="    foo     bar     ""
+	echo "echo \$test > $SHELL_DIR/test_33.out"
+	echo "echo \$? >> $SHELL_DIR/test_33.out"
+}
+
+function minishell_test_33(){
+	echo "export test="    foo     bar     ""
+	echo "echo ab\$test > $SHELL_DIR/test_33.out"
+	echo "echo \$? >> $SHELL_DIR/test_33.out"
+}
+
+function minishell_test_34(){
+	echo "export test="    foo     bar     ""
+	echo "echo \"ab\"\$test > $SHELL_DIR/test_33.out"
+	echo "echo \$? >> $SHELL_DIR/test_33.out"
+}

@@ -18,7 +18,7 @@ i=0
 # Export to give path of tester dir
 export SHELL_DIR="$YOUR_RESULTS"
 # Normal minishell test
-until [ $i -gt 27 ]
+until [ $i -gt 29 ]
 do
 	minishell_test_$i | $RUN
 	let "i++"
@@ -41,7 +41,7 @@ chmod 555 utils/non_exe_file.sh
 i=0
 
 # Bash
-until [ $i -gt 27 ]
+until [ $i -gt 29 ]
 do
 	bash_test_$i &> $BASH_RESULTS/test_$i.out
 	let "i++"
@@ -56,7 +56,7 @@ do
 done
 
 # Check diff of test files
-until [ $i -gt 27 ]
+until [ $i -gt 29 ]
 do
 	diff $BASH_RESULTS/test_$i.out $YOUR_RESULTS/test_$i.out > $DIFF_RESULTS/result_$i.diff
 	let "i++"
@@ -79,6 +79,6 @@ printf "NOTE: Test_37 can have a different exit code!\n"
 
 printf $P
 printf "\n***\n"
-printf "Check directory for results\n"
+printf "Check results/DIFF for results\n"
 printf "***\n\n"
 printf $R
