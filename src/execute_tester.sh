@@ -77,6 +77,8 @@ clear
 printf "NOTE: Test_19 can have a different exit code!\n"
 printf "NOTE: Test_33 has a different outcome when the user
 		does it him/herself\n"
+printf "NOTE: Test_error_14 can have a different exit code!
+		Because of open()\n"
 printf "NOTE: Test_37 can have a different exit code!\n"
 
 printf $P
