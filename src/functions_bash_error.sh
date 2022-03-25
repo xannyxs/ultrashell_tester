@@ -1,4 +1,4 @@
-source defines.sh
+source src/defines.sh
 
 function bash_test_error_0(){
 	unset HOME

@@ -1,4 +1,4 @@
-RUN=../minishell
+RUN=./minishell
 TESTER_HOME=$HOME
 
 # COLORS

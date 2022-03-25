@@ -1,8 +1,8 @@
-source defines.sh
-source functions_bash.sh
-source functions_bash_error.sh
-source functions_minishell.sh
-source functions_minishell_error.sh
+source src/defines.sh
+source src/functions_bash.sh
+source src/functions_bash_error.sh
+source src/functions_minishell.sh
+source src/functions_minishell_error.sh
 
 YOUR_RESULTS=$PWD/results/YOUR_RESULTS
 BASH_RESULTS=$PWD/results/BASH_RESULTS
@@ -54,6 +54,8 @@ do
 	bash_test_error_$i &> $BASH_RESULTS/test_error_$i.out
 	let "i++"
 done
+
+i=0
 
 # Check diff of test files
 until [ $i -gt 29 ]
