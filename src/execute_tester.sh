@@ -1,8 +1,8 @@
-source scripts/defines.sh
-source scripts/functions_bash.sh
-source scripts/functions_bash_error.sh
-source scripts/functions_minishell.sh
-source scripts/functions_minishell_error.sh
+source defines.sh
+source functions_bash.sh
+source functions_bash_error.sh
+source functions_minishell.sh
+source functions_minishell_error.sh
 
 YOUR_RESULTS=$PWD/results/YOUR_RESULTS
 BASH_RESULTS=$PWD/results/BASH_RESULTS

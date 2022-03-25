@@ -1,5 +1,5 @@
 #!/bin/bash
-EXE_FILE=minishell
+EXE_FILE=../minishell
 
 #LOGO PRINT
 printf '\n'
@@ -14,7 +14,7 @@ sleep 1
 #ERROR CHECKING
 if [ ! -f "$EXE_FILE" ]; then
 	echo "Missing executable"
-	echo "Place this tester in your Minishell repo"
+	echo "Place your minishell in this tester"
 	printf '\n'
 	exit -1
 fi
@@ -26,4 +26,5 @@ mkdir results
 mkdir results/DIFF
 mkdir results/YOUR_RESULTS
 mkdir results/BASH_RESULTS
-./scripts/execute_tester.sh
+./execute_tester.sh
+rm test1

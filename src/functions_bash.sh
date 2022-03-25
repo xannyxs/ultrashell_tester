@@ -1,4 +1,4 @@
-source scripts/defines.sh
+source defines.sh
 
 function bash_test_0(){
 	pwd

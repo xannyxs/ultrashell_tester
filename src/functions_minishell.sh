@@ -1,4 +1,4 @@
-source scripts/defines.sh
+source defines.sh
 
 function minishell_test_0(){
 echo "pwd > $SHELL_DIR/test_0.out"
