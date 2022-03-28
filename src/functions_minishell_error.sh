@@ -10,16 +10,16 @@ function minishell_test_error_1(){
 }
 
 function minishell_test_error_2(){
-	echo "cd –"
-	echo "echo \$? >> $SHELL_DIR/test_error_2.out"
-}
-
-function minishell_test_error_3(){
 	echo "mkdir a"
 	echo "mkdir a/b"
 	echo "cd a/b"
 	echo "rm -r ../../a"
 	echo "cd .."
+	echo "echo \$? >> $SHELL_DIR/test_error_2.out"
+}
+
+function minishell_test_error_3(){
+	echo "echo $NonExistingVar"
 	echo "echo \$? >> $SHELL_DIR/test_error_3.out"
 }
 

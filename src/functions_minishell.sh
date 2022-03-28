@@ -130,7 +130,7 @@ function minishell_test_21(){
 }
 
 function minishell_test_22(){
-	echo "echo $USER$wouw$USER$USERtest$USER > $SHELL_DIR/test_2.out"
+	echo "echo $USER$wouw$USER$USERtest$USER > $SHELL_DIR/test_22.out"
 	echo "echo $? >> $SHELL_DIR/test_22.out"
 }
 
@@ -181,20 +181,20 @@ function minishell_test_31(){
 	echo "echo \$? >> $SHELL_DIR/test_31.out"
 }
 
-function minishell_test_32(){
-	echo "export test="    foo     bar     ""
-	echo "echo \$test > $SHELL_DIR/test_33.out"
-	echo "echo \$? >> $SHELL_DIR/test_33.out"
-}
+# function minishell_test_32(){
+# 	echo "export test="    foo     bar     ""
+# 	echo "echo \$test > $SHELL_DIR/test_33.out"
+# 	echo "echo \$? >> $SHELL_DIR/test_33.out"
+# }
 
-function minishell_test_33(){
-	echo "export test="    foo     bar     ""
-	echo "echo ab\$test > $SHELL_DIR/test_33.out"
-	echo "echo \$? >> $SHELL_DIR/test_33.out"
-}
+# function minishell_test_33(){
+# 	echo "export test="    foo     bar     ""
+# 	echo "echo ab\$test > $SHELL_DIR/test_33.out"
+# 	echo "echo \$? >> $SHELL_DIR/test_33.out"
+# }
 
-function minishell_test_34(){
-	echo "export test="    foo     bar     ""
-	echo "echo \"ab\"\$test > $SHELL_DIR/test_33.out"
-	echo "echo \$? >> $SHELL_DIR/test_33.out"
+# function minishell_test_34(){
+# 	echo "export test="    foo     bar     ""
+# 	echo "echo \"ab\"\$test > $SHELL_DIR/test_33.out"
+# 	echo "echo \$? >> $SHELL_DIR/test_33.out"
 }
