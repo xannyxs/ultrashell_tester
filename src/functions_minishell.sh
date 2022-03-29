@@ -183,20 +183,33 @@ function minishell_test_31(){
 }
 
 function minishell_test_32(){
-	echo "cd /tmp"
-	echo "export TEST=\"s -ltra\""
-	echo "l\$TEST > $SHELL_DIR/test_32.out"
+	echo "export TEST=\"c -c\""
+	echo "echo 'test xD' | w\$TEST > $SHELL_DIR/test_32.out"
 	echo "echo \$? >> $SHELL_DIR/test_32.out"
 }
 
-# function minishell_test_33(){
-# 	echo "export test="    foo     bar     ""
-# 	echo "echo ab\$test > $SHELL_DIR/test_33.out"
-# 	echo "echo \$? >> $SHELL_DIR/test_33.out"
-# }
+function minishell_test_33(){
+	echo "export TEST=\"l s \""
+	echo "echo l\$TEST\"s\" >> $SHELL_DIR/test_33.out"
+	echo "export TEST=\"\""
+	echo "echo l\$TEST\"s\" >> $SHELL_DIR/test_33.out"
+	echo "export TEST=\"     \""
+	echo "echo l\$TEST\"s\" >> $SHELL_DIR/test_33.out"
+	echo "export TEST=\" l s\""
+	echo "echo l\$TEST\"s\" >> $SHELL_DIR/test_33.out"
+	echo "export TEST=\" l s \""
+	echo "echo l\$TEST\"s\" >> $SHELL_DIR/test_33.out"
+	echo "export TEST=\" HALLO? XDDD  'we  zijn     hier' misschien, athans...   \""
+	echo "echo \$TEST >> $SHELL_DIR/test_33.out"
+}
+
+function minishell_test_34(){
+	echo "echo '-n ' -nnn hello -n > $SHELL_DIR/test_34.out"
+	echo "echo $? >> $SHELL_DIR/test_34.out"
+}
 
 # function minishell_test_34(){
 # 	echo "export test="    foo     bar     ""
 # 	echo "echo \"ab\"\$test > $SHELL_DIR/test_33.out"
 # 	echo "echo \$? >> $SHELL_DIR/test_33.out"
-}
+#}

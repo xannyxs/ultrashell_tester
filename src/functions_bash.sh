@@ -182,8 +182,27 @@ function bash_test_31(){
 }
 
 function bash_test_32(){
-	cd /tmp
-	export TEST="s -ltra"
-	l$TEST
+	export TEST="c -c"
+	echo 'test xD' | w$TEST
+	echo $?
+}
+
+function bash_test_33(){
+	export TEST="l s "
+	echo l$TEST"s"
+	export TEST=""
+	echo l$TEST"s"
+	export TEST="     "
+	echo l$TEST"s"
+	export TEST=" l s"
+	echo l$TEST"s"
+	export TEST=" l s "
+	echo l$TEST"s"
+	export TEST=" HALLO? XDDD  'we  zijn     hier' misschien, athans...   "
+	echo $TEST
+}
+
+function bash_test_34(){
+	echo '-n ' -nnn hello -n
 	echo $?
 }
