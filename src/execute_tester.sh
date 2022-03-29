@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 source src/defines.sh
 source src/functions_bash.sh
 source src/functions_bash_error.sh
@@ -7,6 +8,9 @@ source src/functions_minishell_error.sh
 YOUR_RESULTS=$PWD/results/YOUR_RESULTS
 BASH_RESULTS=$PWD/results/BASH_RESULTS
 DIFF_RESULTS=$PWD/results/DIFF
+
+NUM_TESTS=32
+NUM_ERROR_TESTS=14
 
 printf "Your results\n"
 echo $YOUR_RESULTS
@@ -18,7 +22,7 @@ i=0
 # Export to give path of tester dir
 export SHELL_DIR="$YOUR_RESULTS"
 # Normal minishell test
-until [ $i -gt 29 ]
+until [ $i -gt $NUM_TESTS ]
 do
 	minishell_test_$i | $RUN
 	let "i++"
@@ -29,7 +33,7 @@ i=0
 chmod 000 utils/non_exe_file.sh
 
 # Error minishell test
-until [ $i -gt 14 ]
+until [ $i -gt $NUM_ERROR_TESTS ]
 do
 	minishell_test_error_$i | $RUN 2> $YOUR_RESULTS/test_error_$i.out
 	let "i++"
@@ -41,7 +45,7 @@ chmod 555 utils/non_exe_file.sh
 i=0
 
 # Bash
-until [ $i -gt 29 ]
+until [ $i -gt $NUM_TESTS ]
 do
 	bash_test_$i &> $BASH_RESULTS/test_$i.out
 	let "i++"
@@ -49,7 +53,7 @@ done
 
 i=0
 
-until [ $i -gt 14 ]
+until [ $i -gt $NUM_ERROR_TESTS ]
 do
 	bash_test_error_$i &> $BASH_RESULTS/test_error_$i.out
 	let "i++"
@@ -58,7 +62,7 @@ done
 i=0
 
 # Check diff of test files
-until [ $i -gt 29 ]
+until [ $i -gt $NUM_TESTS ]
 do
 	diff $BASH_RESULTS/test_$i.out $YOUR_RESULTS/test_$i.out > $DIFF_RESULTS/result_$i.diff
 	let "i++"
@@ -66,13 +70,21 @@ done
 
 i=0
 
-until [ $i -gt 14 ]
+until [ $i -gt $NUM_ERROR_TESTS ]
 do
 	diff $BASH_RESULTS/test_error_$i.out $YOUR_RESULTS/test_error_$i.out > $DIFF_RESULTS/result_error_$i.diff
 	let "i++"
 done
 
 clear
+
+for filename in $DIFF_RESULTS/*; do
+	if [ -s $filename ]; then
+		echo "diff in $(basename $filename)";
+	else
+		rm $filename;
+	fi
+done;
 
 printf "NOTE: Test_19 can have a different exit code!\n"
 printf "NOTE: Test_33 has a different outcome when the user

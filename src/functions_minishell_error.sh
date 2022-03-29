@@ -19,7 +19,7 @@ function minishell_test_error_2(){
 }
 
 function minishell_test_error_3(){
-	echo "echo $NonExistingVar"
+	echo "echo $NonExistingVar > $SHELL_DIR/test_error_3.out"
 	echo "echo \$? >> $SHELL_DIR/test_error_3.out"
 }
 

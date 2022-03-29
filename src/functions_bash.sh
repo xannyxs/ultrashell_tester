@@ -79,6 +79,7 @@ function bash_test_13(){
 }
 
 function bash_test_14(){
+	cd /tmp
 	export ls="ls -l"
 	$ls
 	echo $?
@@ -177,5 +178,12 @@ function bash_test_30(){
 
 function bash_test_31(){
 	export $random
+	echo $?
+}
+
+function bash_test_32(){
+	cd /tmp
+	export TEST="s -ltra"
+	l$TEST
 	echo $?
 }

@@ -83,6 +83,7 @@ function minishell_test_13(){
 }
 
 function minishell_test_14(){
+	echo "cd /tmp"
 	echo "export ls=\"ls -l\""
 	echo "\$ls > $SHELL_DIR/test_14.out"
 	echo "echo $? >> $SHELL_DIR/test_14.out"
@@ -181,11 +182,12 @@ function minishell_test_31(){
 	echo "echo \$? >> $SHELL_DIR/test_31.out"
 }
 
-# function minishell_test_32(){
-# 	echo "export test="    foo     bar     ""
-# 	echo "echo \$test > $SHELL_DIR/test_33.out"
-# 	echo "echo \$? >> $SHELL_DIR/test_33.out"
-# }
+function minishell_test_32(){
+	echo "cd /tmp"
+	echo "export TEST=\"s -ltra\""
+	echo "l\$TEST > $SHELL_DIR/test_32.out"
+	echo "echo \$? >> $SHELL_DIR/test_32.out"
+}
 
 # function minishell_test_33(){
 # 	echo "export test="    foo     bar     ""
