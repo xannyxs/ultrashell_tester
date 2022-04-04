@@ -24,7 +24,7 @@ export SHELL_DIR="$YOUR_RESULTS"
 # Normal minishell test
 until [ $i -gt $NUM_TESTS ]
 do
-	minishell_test_$i | $RUN
+	minishell_test_$i "$SHELL_DIR/test_$i.out" | $RUN
 	let "i++"
 done
 
@@ -35,7 +35,7 @@ chmod 000 utils/non_exe_file.sh
 # Error minishell test
 until [ $i -gt $NUM_ERROR_TESTS ]
 do
-	minishell_test_error_$i | $RUN 2> $YOUR_RESULTS/test_error_$i.out
+	minishell_test_error_$i "$SHELL_DIR/test_error_$i.out" | $RUN 2> $YOUR_RESULTS/test_error_$i.out
 	let "i++"
 done
 

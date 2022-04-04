@@ -30,6 +30,7 @@ function bash_test_4(){
 }
 
 function bash_test_5(){
+	export HOMEEPIC=EPIC
 	export HOME=$TESTER_HOME
 	cd
 	echo $?
