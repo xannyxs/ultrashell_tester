@@ -208,6 +208,11 @@ function minishell_test_34(){
 	echo "echo \$? >> $SHELL_DIR/test_34.out"
 }
 
+function minishell_test_35(){
+	echo "ls -l / | cat | wc -l > $SHELL_DIR/test_35.out"
+	echo "echo \$? >> $SHELL_DIR/test_35.out"
+}
+
 # function minishell_test_34(){
 # 	echo "export test="    foo     bar     ""
 # 	echo "echo \"ab\"\$test > $SHELL_DIR/test_33.out"

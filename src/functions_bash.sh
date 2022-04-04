@@ -206,3 +206,8 @@ function bash_test_34(){
 	echo '-n ' -nnn hello -n
 	echo $?
 }
+
+function bash_test_35(){
+	ls -l / | cat | wc -l
+	echo $?
+}
