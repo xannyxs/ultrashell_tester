@@ -84,3 +84,11 @@ function bash_test_error_15(){
 	/bin/ls qwerty
 	echo $?
 }
+
+function bash_test_error_16(){
+	echo asdf > test.out
+	chmod +x test.out
+	./test.out
+	echo $?
+	rm test.out
+}

@@ -83,3 +83,11 @@ function minishell_test_error_15(){
 	echo "/bin/ls qwerty"
 	echo "echo \$? >> $1"
 }
+
+function bash_test_error_16(){
+	echo "echo asdf > test.out"
+	echo "chmod +x test.out"
+	echo "./test.out"
+	echo "echo \$? > $1"
+	echo "rm test.out"
+}
