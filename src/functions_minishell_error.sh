@@ -84,10 +84,15 @@ function minishell_test_error_15(){
 	echo "echo \$? >> $1"
 }
 
-function bash_test_error_16(){
-	echo "echo asdf > test.out"
-	echo "chmod +x test.out"
-	echo "./test.out"
+function minishell_test_error_16(){
+	echo 'echo " #!/bin/bash" > /tmp/ultrashell_test.out'
+	echo 'chmod +x /tmp/ultrashell_test.out'
+	echo '/tmp/ultrashell_test.out'
 	echo "echo \$? > $1"
-	echo "rm test.out"
+	echo 'rm /tmp/ultrashell_test.out'
+}
+
+function minishell_test_error_17(){
+	echo "unset a=6 > $1"
+	echo "echo \$? >> $1"
 }

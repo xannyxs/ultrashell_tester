@@ -86,9 +86,14 @@ function bash_test_error_15(){
 }
 
 function bash_test_error_16(){
-	echo asdf > test.out
-	chmod +x test.out
-	./test.out
+	printf "#\005!\006/bin/bash" > /tmp/ultrashell_test.out
+	chmod +x /tmp/ultrashell_test.out
+	/tmp/ultrashell_test.out
 	echo $?
-	rm test.out
+	rm /tmp/ultrashell_test.out
+}
+
+function bash_test_error_17(){
+	unset a=6
+	echo $?
 }
