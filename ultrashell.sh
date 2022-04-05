@@ -27,4 +27,5 @@ mkdir results/DIFF
 mkdir results/YOUR_RESULTS
 mkdir results/BASH_RESULTS
 ./src/execute_tester.sh
-# rm ./test1.
+rm test
+rm test1

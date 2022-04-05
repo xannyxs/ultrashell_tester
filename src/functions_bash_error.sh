@@ -79,3 +79,8 @@ function bash_test_error_14(){
 	cat -e > test1 < test2
 	echo $?
 }
+
+function bash_test_error_15(){
+	/bin/ls qwerty
+	echo $?
+}

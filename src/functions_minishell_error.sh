@@ -77,3 +77,9 @@ function minishell_test_error_14(){
 	echo "cat -e > test1 < test2"
 	echo "echo \$? >> $1"
 }
+
+function minishell_test_error_15(){
+	echo "cd"
+	echo "/bin/ls qwerty"
+	echo "echo \$? >> $1"
+}

@@ -214,8 +214,14 @@ function minishell_test_35(){
 	echo "echo \$? >> $1"
 }
 
-# function minishell_test_34(){
-# 	echo "export test="    foo     bar     ""
-# 	echo "echo \"ab\"\$test > $1"
-# 	echo "echo \\$? >> $1"
-#}
+function minishell_test_36(){
+	echo "unset HOME"
+	echo "cd .. > $1"
+	echo "echo \$? >> $1"
+}
+
+function minishell_test_37(){
+	echo "cd"
+	echo "/bin/ls > $1"
+	echo "echo \$? >> $1"
+}

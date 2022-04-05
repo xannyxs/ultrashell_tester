@@ -212,3 +212,16 @@ function bash_test_35(){
 	ls -l / | cat | wc -l
 	echo $?
 }
+
+function bash_test_36(){
+	unset HOME
+	cd ..
+	echo $?
+	export HOME=$TESTER_HOME
+}
+
+function bash_test_37(){
+	cd
+	/bin/ls
+	echo $?
+}

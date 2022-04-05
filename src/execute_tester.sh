@@ -5,12 +5,13 @@ source src/functions_bash_error.sh
 source src/functions_minishell.sh
 source src/functions_minishell_error.sh
 
+TESTER_DIR=$PWD
 YOUR_RESULTS=$PWD/results/YOUR_RESULTS
 BASH_RESULTS=$PWD/results/BASH_RESULTS
 DIFF_RESULTS=$PWD/results/DIFF
 
-NUM_TESTS=35
-NUM_ERROR_TESTS=14
+NUM_TESTS=37
+NUM_ERROR_TESTS=15
 
 printf "Your results\n"
 echo $YOUR_RESULTS
@@ -98,3 +99,5 @@ printf "\n***\n"
 printf "Check results/DIFF for results\n"
 printf "***\n\n"
 printf $R
+
+cd $TESTER_DIR
